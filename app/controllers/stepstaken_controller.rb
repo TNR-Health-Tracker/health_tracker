@@ -2,7 +2,7 @@ class StepstakenController < ApplicationController
   before_action :set_step, only: [:show, :edit, :update, :destroy]
 
   def index
-    @steps = steps.all
+    @steps = StepsTaken.all
   end
 
   def show

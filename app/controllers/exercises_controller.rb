@@ -36,7 +36,7 @@ class ExercisesController < ApplicationController
   # PATCH/PUT /exercises/1.json
   def update
       if @exercise.update(exercise_params)
-        redirect_to @exercise, notice: 'Exercise was successfully updated.' 
+        redirect_to @exercise, notice: 'Exercise was successfully updated.'
       else
         render :edit
       end
@@ -59,5 +59,4 @@ class ExercisesController < ApplicationController
     def exercise_params
       params.require(:exercise).permit(:pounds, :entry_date)
     end
-end
 end
