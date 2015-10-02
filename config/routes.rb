@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root 'health_tracker#dashboard'
   get 'dashboard/index'
-  
+
+
+  resources :health_tracker
 
 
 
