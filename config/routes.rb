@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'stepstaken/index'
+
+  get 'stepstaken/show'
+
+  resources :calories
   resources :weights
   root 'health_trackers#dashboard'
 
