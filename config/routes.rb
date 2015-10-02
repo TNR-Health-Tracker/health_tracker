@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'health_tracker#dashboard'
-  get 'dashboard/index'
+  root 'health_trackers#dashboard'
+
 
 
   resources :health_tracker
