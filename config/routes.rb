@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :weights
   root 'health_trackers#dashboard'
 
 

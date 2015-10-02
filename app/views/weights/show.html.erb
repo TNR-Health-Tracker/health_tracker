@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pounds:</strong>
+  <%= @weight.pounds %>
+</p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @weight.entry_date %>
+</p>
+
+<%= link_to 'Edit', edit_weight_path(@weight) %> |
+<%= link_to 'Back', weights_path %>
