@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
+
+  root 'health_tracker#dashboard'
+  get 'dashboard/index'
+
+
+  resources :health_tracker
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  # #
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
