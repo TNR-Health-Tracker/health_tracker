@@ -21,34 +21,26 @@ class StepstakenController < ApplicationController
   # POST /calories.json
   def create
     @step = Stepstaken.new(step_params)
-  end
 
-  respond_to do |format|
     if @step.save
-      format.html { redirect_to @step, notice: 'Step was successfully created.' }
-      format.json { render :show, status: :created, location: @step }
+      redirect_to @step, notice: 'Step was successfully created.'
     else
-      format.html { render :new }
-      format.json { render json: @step.errors, status: :unprocessable_entity }
+      render :new
     end
   end
-end
 
 
-def update
-  respond_to do |format|
+  def update
     if @step.update(step_params)
-      format.html { redirect_to @step, notice: 'Step was successfully updated.' }
-      format.json { render :show, status: :ok, location: @step }
+      redirect_to @step, notice: 'Step was successfully updated.'
     else
-      format.html { render :edit }
-      format.json { render json: @step.errors, status: :unprocessable_entity }
+      render :edit
     end
   end
-end
 
+  private
 
-
-
-
+  def set_step
+    @step = 1
+  end
 end

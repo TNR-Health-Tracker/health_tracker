@@ -25,40 +25,28 @@ class WeightsController < ApplicationController
   # POST /weights.json
   def create
     @weight = Weight.new(weight_params)
-
-    respond_to do |format|
       if @weight.save
-        format.html { redirect_to @weight, notice: 'Weight was successfully created.' }
-        format.json { render :show, status: :created, location: @weight }
+        redirect_to @weight, notice: 'Weight was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @weight.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
   end
 
   # PATCH/PUT /weights/1
   # PATCH/PUT /weights/1.json
   def update
-    respond_to do |format|
       if @weight.update(weight_params)
-        format.html { redirect_to @weight, notice: 'Weight was successfully updated.' }
-        format.json { render :show, status: :ok, location: @weight }
+        redirect_to @weight, notice: 'Weight was successfully updated.' 
       else
-        format.html { render :edit }
-        format.json { render json: @weight.errors, status: :unprocessable_entity }
+        render :edit
       end
-    end
   end
 
   # DELETE /weights/1
   # DELETE /weights/1.json
   def destroy
     @weight.destroy
-    respond_to do |format|
-      format.html { redirect_to weights_url, notice: 'Weight was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      redirect_to weights_url, notice: 'Weight was successfully destroyed.'
   end
 
   private

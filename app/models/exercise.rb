@@ -1,6 +1,7 @@
 class Exercise < ActiveRecord::Base
-  has_many: exercise_types
-  has_many: calories
+  belongs_to :exercise_type
+  has_many :calories
+  validates :exercise_type, presence: true
+  validates :entry_date, presence: true
 
-  
 end
