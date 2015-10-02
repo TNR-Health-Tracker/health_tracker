@@ -1,6 +1,13 @@
+<% provide(title: "Dashboard") %>
 <div class="content">
-  <h1> TNR Health Master </h1>
+  <h1> TNR Health Master - Dashboard </h1>
 
 
-  <p> Your total amount of steps taken is:  <%= @total_steps %> </p>
+  <p> Welcome to the TNR Health Tracker </p>
+
+  <p><%= link_to 'View Weigh-ins', weights_path %></p>
+  <p><%= link_to 'Exercise Logs', exercises_path %></p>
+  <p><%= link_to 'Steps Taken', stepstaken_index_path %></p>
+
+  <p class="bottom"></p>
 </div>
