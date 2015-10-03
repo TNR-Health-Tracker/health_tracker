@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+exercise_types = ["Pilates","Yoga", "Cardio", "Weight Training", "Squats", "Push-Ups",
+                  "Bicycling", "Kayaking"]
+
+exercise_types.sort!
+exercise_types.each do |type|
+  ExerciseType.create!(name: type)
+end

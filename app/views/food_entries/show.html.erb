@@ -1,0 +1,23 @@
+<div class="content">
+
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Food:</strong>
+    <%= @food_entry.name %>
+  </p>
+
+  <p>
+    <strong>Calories:</strong>
+    <%= @food_entry.calories %>
+  </p>
+
+  <p>
+    <strong>Entry date:</strong>
+    <%= @food_entry.entry_date %>
+  </p>
+
+  <%= link_to 'Edit', edit_food_entry_path(@food_entry) %> |
+  <%= link_to 'Back', food_entries_path %>
+</div>

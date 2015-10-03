@@ -1,0 +1,34 @@
+<%= provide(:title, "Historical Weights") %>
+<div class="content">
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Historical Weights</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Pounds</th>
+        <th>Entry date</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @weights.each do |weight| %>
+        <tr>
+          <td><%= weight.pounds %></td>
+          <td><%= weight.entry_date %></td>
+          <td><%= link_to 'Show', weight %></td>
+          <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
+          <td><%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <p class = "bottom">
+    <%= link_to 'New Weight Entry', new_weight_path %>
+  </p>
+</div>
