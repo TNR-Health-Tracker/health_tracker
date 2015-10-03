@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :calories
+  # resources :calories
   resources :weights
   resources :exercises
-  resources :stepstaken
+  resources :steps
   resources :health_trackers
 
   root 'health_trackers#dashboard'

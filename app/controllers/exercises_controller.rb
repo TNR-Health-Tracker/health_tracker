@@ -20,6 +20,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/1/edit
   def edit
+    @options = ExerciseType.all_names
   end
 
   # POST /exercises
