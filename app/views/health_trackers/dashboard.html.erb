@@ -5,9 +5,12 @@
 
   <p> Welcome to the TNR Health Tracker </p>
 
+  You have walked <%= @steps %> steps today. That's <%= @distance %> miles!
+
   <p><%= link_to 'View Weigh-ins', weights_path %></p>
   <p><%= link_to 'View Exercise Logs', exercises_path %></p>
   <p><%= link_to 'View Steps Taken', steps_path %></p>
+
 
   <p class="bottom"></p>
 </div>

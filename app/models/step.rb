@@ -6,6 +6,11 @@ class Step < ActiveRecord::Base
     self.count
   end
 
+  def self.steps_today
+    steps_today = self.where("entry_date = ?", Date.today.strftime('%Y-%m-%d'))
+    steps_today.empty? ? 0 : steps_today.sum('taken')
+  end
+
 
 
 
