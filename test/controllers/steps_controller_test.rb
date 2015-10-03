@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class StepstakenControllerTest < ActionController::TestCase
+class StepsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
   end
 
   test "should get show" do
-    get :show
+    get :show, id: 1
     assert_response :success
   end
 

@@ -1,0 +1,30 @@
+<%= provide(:title, "Steps Taken") %>
+
+<h1>Steps Taken</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Toatal</th>
+      <th>Entry Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @steps.each do |step| %>
+      <tr>
+        <td><%= steps.taken %></td>
+        <td><%= steps.entry_date %></td>
+        <td><%= link_to 'Show', step %></td>
+        <td><%= link_to 'Edit', edit_step_path(step) %></td>
+        <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Steps',  new_step_path %>
