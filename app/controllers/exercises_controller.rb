@@ -15,6 +15,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/new
   def new
     @exercise = Exercise.new
+    @options = ExerciseType.all_names
   end
 
   # GET /exercises/1/edit
@@ -57,6 +58,6 @@ class ExercisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
-      params.require(:exercise).permit(:pounds, :entry_date)
+      params.require(:exercise).permit(:exercise, :calories_burned, :entry_date, :exercise_type_id)
     end
 end
