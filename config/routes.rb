@@ -4,11 +4,19 @@ Rails.application.routes.draw do
   resources :weights
   resources :exercises
   resources :stepstaken
+  resources :health_trackers
+
   root 'health_trackers#dashboard'
 
 
 
-  resources :health_tracker
+
+
+
+
+
+
+
 
 
 
