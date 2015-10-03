@@ -6,19 +6,27 @@
       <ul>
       <% @exercise.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
     <%= f.label :exercise_type_id %><br>
-    <%= f.text_field :exercise_type_id %>
+    <%= f.select :exercise_type_id, [["Pilates", 1],["Yoga", 2], ["Cardio", 3], ["Weight Training", 4], ["Squats", 5], ["Push-Ups", 6],
+                      ["Bicycling", 7], ["Kayaking", 8]] %>
   </div>
+
+  <div class="field">
+    <%= f.label :calories_burned %><br>
+    <%= f.number_field :calories_burned %>
+  </div>
+
   <div class="field">
     <%= f.label :entry_date %><br>
     <%= f.date_select :entry_date %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
