@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
 
   resources :food_entries
-  resources :calories
   resources :weights
   resources :exercises
   resources :stepstaken
   root 'health_trackers#dashboard'
-
-
-
-  resources :health_tracker
 
 
 
