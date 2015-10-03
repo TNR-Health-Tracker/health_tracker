@@ -10,7 +10,7 @@ class StepstakenController < ApplicationController
 
   # GET /stepstaken/new
   def new
-    @step = Stepstaken.new
+    @step = StepsTaken.new
   end
 
   # GET /Stepstaken/1/edit
@@ -20,7 +20,7 @@ class StepstakenController < ApplicationController
   # POST /calories
   # POST /calories.json
   def create
-    @step = Stepstaken.new(step_params)
+    @step = StepsTaken.new(step_params)
 
     if @step.save
       redirect_to @step, notice: 'Step was successfully created.'
