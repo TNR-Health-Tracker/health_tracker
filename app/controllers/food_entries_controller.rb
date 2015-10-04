@@ -4,7 +4,7 @@ class FoodEntriesController < ApplicationController
 
 
   def index
-    @foods = FoodEntry.all
+    @food_entries = FoodEntry.all
   end
 
   def show
@@ -46,7 +46,7 @@ class FoodEntriesController < ApplicationController
 
   def destroy
     @food.destroy
-      redirect_to steps_url, notice: 'Food Entry was successfully destroyed.'
+      redirect_to food_entries_url, notice: 'Food Entry was successfully destroyed.'
   end
 
   private
@@ -57,7 +57,7 @@ class FoodEntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def step_params
-      params.require(:food).permit(:name, :calories, :entry_date)
+      params.require(:food_entry).permit(:name, :calories, :entry_date)
     end
 
 end

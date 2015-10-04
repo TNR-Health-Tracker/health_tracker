@@ -5,20 +5,19 @@
       <h2><%= pluralize(@food.errors.count, "error") %> prohibited this entry from being saved:</h2>
 
       <ul>
-      <% @food.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @food.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  </div>
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.number_field :name %>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :caloris %><br>
+    <%= f.label :calories %><br>
     <%= f.number_field :calories %>
   </div>
   <div class="field">
@@ -28,3 +27,4 @@
   <div class="actions">
     <%= f.submit "Create Food Entry" %>
   </div>
+<% end %>

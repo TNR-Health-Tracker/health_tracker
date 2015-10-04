@@ -1,2 +1,35 @@
-<h1>FoodEntries#index</h1>
-<p>Find me in app/views/food_entries/index.html.erb</p>
+<div class="content">
+
+
+  <p id="notice"><%= notice %></p>
+
+  <h1>Food Entries</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Entry date</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @food_entries.each do |food_entry| %>
+        <tr>
+          <td><%= food_entry.name %></td>
+          <td><%= food_entry.calories %></td>
+          <td><%= food_entry.entry_date %></td>
+          <td><%= link_to 'Show', food_entry %></td>
+          <td><%= link_to 'Edit', edit_food_entry_path(food_entry) %></td>
+          <td><%= link_to 'Destroy', food_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Food entry', new_food_entry_path %>
+</div>
