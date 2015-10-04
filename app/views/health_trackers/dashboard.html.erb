@@ -3,22 +3,24 @@
 <div class="content">
   <h1> Dashboard </h1>
 
-
   <p> Welcome to the TNR Health Tracker </p>
 
-  You currently weigh <%= @current_weight %> pounds.
-  <br>
-  Your starting weight was <%= @first_weight %> pounds.
-  <br>
-  You have <%= @current_weight > @first_weight ? "gained" : "lost" %>
-   <%= (@current_weight - @first_weight).abs %> pounds!
-  <br>
-  You have walked <%= @steps %> steps today. That's <%= @distance %> miles!
-  <br>
-  You have burned <%= @calories_burned%> calories today.
-
-
-
+  <span class="stats">
+    You currently weigh <%= @current_weight %> pounds.
+    <br>
+    Your starting weight was <%= @first_weight %> pounds.
+    <br>
+    You have <%= @current_weight > @first_weight ? "gained" : "lost" %>
+     <%= (@current_weight - @first_weight).abs %> pounds!
+    <br>
+    You have walked <%= @steps %> steps today. That's <%= @distance %> miles!
+    <br>
+    You have eaten <%= @calories_consumed %> calories today.
+    <br>
+    You have burned <%= @calories_burned %> calories through exercise.
+    <br>
+    Your net for the day is: <%= @calories_consumed - @calories_burned%> calories.
+  </span>
 
   <p class="bottom"></p>
 </div>

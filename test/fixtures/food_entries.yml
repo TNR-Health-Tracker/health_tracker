@@ -1,12 +1,12 @@
 
 one:
-  exercise_type_id: 1
-  calories_burned: 500
+  name: Spaghetti
+  calories: 500
   entry_date: 2015-10-02
 # column: value
 #
 two:
-  exercise_type_id: 2
-  calories_burned: 600
+  name: Peaches
+  calories: 100
   entry_date: <%= Date.today.strftime('%Y-%m-%d') %>
 #  column: value
