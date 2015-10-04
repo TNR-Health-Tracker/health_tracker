@@ -11,7 +11,4 @@ class Step < ActiveRecord::Base
     steps_today.empty? ? 0 : steps_today.sum('taken')
   end
 
-
-
-
 end
