@@ -1,9 +1,11 @@
+<%= provide(:title, "Edit Food Entry") %>
 <div class="content">
+  <h1>Editing Foods</h1>
 
-  <h1>Editing Food Entry</h1>
+  <%= render 'form'%>
 
-  <%= render 'form' %>
-
-  <%= link_to 'Show', @food_entry %> |
+  <%= link_to 'Show', @food %> |
   <%= link_to 'Back', food_entries_path %>
+
+  <p class="bottom"></p>
 </div>

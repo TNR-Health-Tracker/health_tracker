@@ -1,14 +1,32 @@
-<% provide(title: "Dashboard") %>
+<%= provide(:title, "Dashboard") %>
+<p></p>
 <div class="content">
-  <h1> TNR Health Master - Dashboard </h1>
+  <h1> Welcome to the TNR Health Tracker </h1>
 
+  <!-- <p id="welcome">  </p> -->
 
-  <p> Welcome to the TNR Health Tracker </p>
+  <span class="stats">
+    <h4> Weight </h4>
+    You currently weigh <span class="number"> <%= @current_weight %> </span> pounds.
+    <br>
+    Your starting weight was <span class="number"> <%= @first_weight %> </span> pounds.
+    <br>
+    You have <%= @current_weight > @first_weight ? "gained" : "lost" %>
+    <span class="number"> <%= (@current_weight - @first_weight).abs %> </span> pounds!
+    <p></p>
 
-  <p><%= link_to 'View Weigh-ins', weights_path %></p>
-  <p><%= link_to 'View Food Entries', food_entries_path%></p>
-  <p><%= link_to 'View Exercise Logs', exercises_path %></p>
-  <p><%= link_to 'View Steps Taken', stepstaken_index_path %></p>
+    <h4> Steps </h4>
+    You have walked <span class="number"> <%= @steps %> </span> steps today.
+    That's <span class="number"> <%= @distance %>  </span> miles!
+    <p></p>
 
+    <h4> Calories </h4>
+    You have eaten <span class="number"> <%= @calories_consumed %> </span> calories today.
+    <br>
+    You have burned <span class="number"> <%= @calories_burned %> </span> calories through exercise.
+    <br>
+    Your net for the day is: <span class="number"> <%= @calories_consumed - @calories_burned%> </span> calories.
+  </span>
+  
   <p class="bottom"></p>
 </div>

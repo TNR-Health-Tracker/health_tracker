@@ -1,4 +1,3 @@
-require 'byebug'
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
@@ -21,6 +20,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/1/edit
   def edit
+    @options = ExerciseType.all_names
   end
 
   # POST /exercises
@@ -59,6 +59,6 @@ class ExercisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
-      params.require(:exercise).permit(:calories_burned, :entry_date, :exercise_type_id)
+      params.require(:exercise).permit(:exercise, :calories_burned, :entry_date, :exercise_type_id)
     end
 end

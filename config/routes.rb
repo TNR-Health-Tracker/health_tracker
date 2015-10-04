@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   resources :food_entries
   resources :weights
   resources :exercises
-  resources :stepstaken
-  root 'health_trackers#dashboard'
+  resources :steps
+  resources :health_trackers
 
+  root 'health_trackers#dashboard'
 
 
 
