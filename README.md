@@ -15,6 +15,7 @@ This program allows a user to keep track of their daily food intake, exercise, s
 
 
 ## Change log
+* Removed empty HealthTracker model
 * Added styling to numbers on dashboard
 * Added food entries functionality
 * Fixed a bug that caused a crash when exercise_types db was empty
