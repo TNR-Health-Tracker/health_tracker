@@ -4,7 +4,6 @@
   <p id="notice"><%= notice %></p>
 
   <h1>Historical Exercises</h1>
-
   <table>
     <thead>
       <tr>
@@ -18,7 +17,11 @@
     <tbody>
       <% @exercises.each do |exercise| %>
         <tr>
-          <td><%= exercise.exercise_type.name %></td>
+          <% if exercise.exercise_type %>
+            <td><%= exercise.exercise_type.name %></td>
+          <% else %>
+            <td>Please run rake db:seed </td>
+          <% end %>
           <td><%= exercise.calories_burned %></td>
           <td><%= exercise.entry_date %></td>
           <td><%= link_to 'Show', exercise %></td>

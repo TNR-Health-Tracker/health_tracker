@@ -4,7 +4,10 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  exercise_type_id: 1
+  calories_burned: 500
+  entry_date: 2015-10-02
 # column: value
 #
 two: {}
