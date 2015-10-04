@@ -11,7 +11,7 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :taken %><br>
+    <%= f.label :taken, "Steps Taken" %><br>
     <%= f.number_field :taken %>
   </div>
   <div class="field">
@@ -19,6 +19,6 @@
     <%= f.date_select :entry_date %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Walking Entry" %>
   </div>
 <% end %>
