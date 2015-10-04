@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  resources :food_entries
   resources :steps
   resources :calories
   resources :weights

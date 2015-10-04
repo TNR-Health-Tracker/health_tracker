@@ -5,8 +5,4 @@ class Step < ActiveRecord::Base
   def self.total
     self.count
   end
-
-
-
-
 end
