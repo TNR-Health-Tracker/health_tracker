@@ -19,3 +19,5 @@ This program allows a user to keep track of their daily food intake, exercise, s
 
 ## Known Issues
 * There are no cats in this app.
+
+chicken
