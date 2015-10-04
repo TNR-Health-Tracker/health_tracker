@@ -1,2 +1,0 @@
-class HealthTracker
-end
