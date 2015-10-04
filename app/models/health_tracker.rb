@@ -1,3 +1,2 @@
-class HealthTracker < ActiveRecord::Base
-
+class HealthTracker
 end
