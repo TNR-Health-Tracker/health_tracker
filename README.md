@@ -23,5 +23,4 @@ This program allows a user to keep track of their daily food intake, exercise, s
 
 
 ## Known Issues
-* App will crash if an exercise form is submitted while there are no exercise types in the database.
 * There are no cats in this app.
