@@ -14,7 +14,7 @@
 
   <% if @options.empty? %>
     <div class="field">
-      Please run rake db:seed to populate the exercise types
+      Please run rake db:seed to populate the exercise types.
     </div>
   <% else %>
     <div class="field">
@@ -32,8 +32,13 @@
     <%= f.label :entry_date %><br>
     <%= f.date_select :entry_date %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Create Exercise Entry" %>
-  </div>
+  <% if @options.empty? %>
+    <div class="field">
+      Please run rake db:seed before submitting this form.
+    </div>
+  <% else %>
+    <div class="actions">
+      <%= f.submit "Create Exercise Entry" %>
+    </div>
+  <% end %>
 <% end %>
